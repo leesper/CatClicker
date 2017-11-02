@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cat-list {
+  width: 30%;
+}
+
+.cat-display {
+  width: 70%;
+}

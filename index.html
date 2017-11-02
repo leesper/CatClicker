@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Cat Clicker</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="cat-list">
+      <ul>
+        <li class="cat-item">Tom</li>
+        <li class="cat-item">Jerry</li>
+        <li class="cat-item">Jack</li>
+      </ul>
+    </div>
+    <div class="cat-display">
+    </div>
+  </div>
+</body>
+<script src="js/jQuery.js"></script>
+<script type="text/javascript">
+  $('.cat-item').click(function(e) {
+    const name = $(e.target).html();
+    $('.cat-display').html('');
+    $('.cat-display').append(`<p>Name: <span class="cat-name">${name}</span></p>`);
+    $('.cat-display').append('<p>Count: <span class="count">0</span></p>');
+    $('.cat-display').append(`<img src="./${name}.jpg" alt="cute cat" class="cat-image" />`);
+    $('.cat-image').click(function(e) {
+      let count = $('.count').html();
+      count++;
+      $('.count').html(count);
+    })
+  });
+</script>
+
+</html>
